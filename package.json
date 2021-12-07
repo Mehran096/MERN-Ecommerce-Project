@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node backend/Server.js",
-    "dev": "nodemon backend/Server.js"
+    "dev": "nodemon backend/Server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix fronttend && npm run build --prefix fronttend"
   },
   "keywords": [],
   "author": "",
