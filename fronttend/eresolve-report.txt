@@ -1,0 +1,81 @@
+# npm resolution error report
+
+2021-12-01T21:22:17.239Z
+
+While resolving: fronttend@0.1.0
+Found: chart.js@3.0.0
+node_modules/chart.js
+  chart.js@"3.0.0" from the root project
+
+Could not resolve dependency:
+peer chart.js@"^3.5.0" from react-chartjs-2@4.0.0
+node_modules/react-chartjs-2
+  react-chartjs-2@"^4.0.0" from the root project
+
+Fix the upstream dependency conflict, or retry
+this command with --force, or --legacy-peer-deps
+to accept an incorrect (and potentially broken) dependency resolution.
+
+Raw JSON explanation object:
+
+{
+  "code": "ERESOLVE",
+  "current": {
+    "name": "chart.js",
+    "version": "3.0.0",
+    "whileInstalling": {
+      "name": "fronttend",
+      "version": "0.1.0",
+      "path": "D:\\Important files\\Ecommerce-Project\\fronttend"
+    },
+    "location": "node_modules/chart.js",
+    "isWorkspace": false,
+    "dependents": [
+      {
+        "type": "prod",
+        "name": "chart.js",
+        "spec": "3.0.0",
+        "from": {
+          "location": "D:\\Important files\\Ecommerce-Project\\fronttend"
+        }
+      }
+    ]
+  },
+  "currentEdge": {
+    "type": "prod",
+    "name": "chart.js",
+    "spec": "3.0.0",
+    "from": {
+      "location": "D:\\Important files\\Ecommerce-Project\\fronttend"
+    }
+  },
+  "edge": {
+    "type": "peer",
+    "name": "chart.js",
+    "spec": "^3.5.0",
+    "error": "INVALID",
+    "from": {
+      "name": "react-chartjs-2",
+      "version": "4.0.0",
+      "whileInstalling": {
+        "name": "fronttend",
+        "version": "0.1.0",
+        "path": "D:\\Important files\\Ecommerce-Project\\fronttend"
+      },
+      "location": "node_modules/react-chartjs-2",
+      "isWorkspace": false,
+      "dependents": [
+        {
+          "type": "prod",
+          "name": "react-chartjs-2",
+          "spec": "^4.0.0",
+          "from": {
+            "location": "D:\\Important files\\Ecommerce-Project\\fronttend"
+          }
+        }
+      ]
+    }
+  },
+  "strictPeerDeps": false,
+  "force": false
+}
