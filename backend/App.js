@@ -14,8 +14,8 @@ const payment = require("./routes/paymentRoute")
 
 // Config
 if (process.env.NODE_ENV !== "PRODUCTION") {
-    require("dotenv").config({ path: "backend/config/config.env" });
-  }
+  require("dotenv").config({ path: "backend/config/config.env" });
+}
 
 app.use(express.json())
 app.use(cookieParser())
@@ -27,12 +27,11 @@ app.use("/", user)
 app.use("/", order)
 app.use("/", payment)
 
-if(process.env.NODE_ENV === 'production'){
-  app.use(express.static(path.join(__dirname, '/fronttend/build/')))
-  app.get('*', (req, res) => {
-      res.sendFile(path.resolve(__dirname, 'fronttend', 'build', 'index.html'))
-  })
-}
+app.use(express.static(path.join(__dirname, "../frontend/build")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../frontend/build/index.html"));
+});
 
 //middleWare for error
 app.use(errorMiddleWare)

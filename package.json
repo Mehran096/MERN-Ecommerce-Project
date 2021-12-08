@@ -7,10 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node backend/Server.js",
     "dev": "nodemon backend/Server.js",
-    "client": "npm start --prefix fronttend",
-    "clientInstall": "npm install --prefix fronttend",
-    "build": "npm run build --prefix fronttend",
-    "heroku-postbuild": "npm run clientInstall && npm run build"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix fronttend && npm run build --prefix fronttend"
   },
   "keywords": [],
   "author": "",
